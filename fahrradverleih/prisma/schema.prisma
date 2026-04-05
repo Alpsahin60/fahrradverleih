@@ -1,0 +1,53 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Fahrrad {
+  id        String   @id @default(cuid())
+  name      String
+  hersteller String
+  status    FahrradStatus @default(FREI)
+  zustand   String
+  typ       String   @default("Standardbike")
+  istEBike  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  ausleihen Ausleihe[]
+  
+  @@map("fahrraeder")
+}
+
+model Ausleihe {
+  id           String   @id @default(cuid())
+  fahrradId    String
+  fahrrad      Fahrrad  @relation(fields: [fahrradId], references: [id])
+  datum        DateTime @default(now())
+  rueckgabeDatum DateTime?
+  status       AusleiheStatus @default(AKTIV)
+  name         String
+  telefonnummer String?
+  email        String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  @@map("ausleihen")
+}
+
+enum FahrradStatus {
+  FREI
+  BELEGT
+}
+
+enum AusleiheStatus {
+  AKTIV
+  ZURUECKGEGEBEN
+}

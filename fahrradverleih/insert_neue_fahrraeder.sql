@@ -1,0 +1,22 @@
+-- 20 moderne Fahrräder mit verschiedenen Typen und E-Bike Varianten
+INSERT INTO fahrraeder (id, name, hersteller, status, zustand, typ, istEBike, createdAt, updatedAt) VALUES
+('clz1a1b2c3d4e5f6g7h8', 'Trek X-Caliber 9', 'Trek', 'FREI', 'Neu', 'Mountainbike', FALSE, NOW(), NOW()),
+('clz2b3c4d5e6f7g8h9i0', 'Specialized Turbo Vado SL', 'Specialized', 'FREI', 'Sehr gut', 'E-Bike', TRUE, NOW(), NOW()),
+('clz3c4d5e6f7g8h9i0j1', 'Giant TCR Advanced Pro', 'Giant', 'FREI', 'Neu', 'Rennrad', FALSE, NOW(), NOW()),
+('clz4d5e6f7g8h9i0j1k2', 'Cannondale Quick CX 3', 'Cannondale', 'FREI', 'Gut', 'Crossbike', FALSE, NOW(), NOW()),
+('clz5e6f7g8h9i0j1k2l3', 'Cube Kathmandu Hybrid Pro', 'Cube', 'FREI', 'Sehr gut', 'E-Bike', TRUE, NOW(), NOW()),
+('clz6f7g8h9i0j1k2l3m4', 'Scott Spark 940', 'Scott', 'FREI', 'Gebraucht', 'Mountainbike', FALSE, NOW(), NOW()),
+('clz7g8h9i0j1k2l3m4n5', 'Bulls Cross Lite E', 'Bulls', 'FREI', 'Neu', 'E-Bike', TRUE, NOW(), NOW()),
+('clz8h9i0j1k2l3m4n5o6', 'Merida Big Nine 500', 'Merida', 'FREI', 'Sehr gut', 'Mountainbike', FALSE, NOW(), NOW()),
+('clz9i0j1k2l3m4n5o6p7', 'KTM Macina Tour 510', 'KTM', 'FREI', 'Neu', 'E-Bike', TRUE, NOW(), NOW()),
+('cla0j1k2l3m4n5o6p7q8', 'Haibike SDURO HardSeven', 'Haibike', 'FREI', 'Gut', 'E-Bike', TRUE, NOW(), NOW()),
+('cla1k2l3m4n5o6p7q8r9', 'Rose Granite Chief', 'Rose', 'FREI', 'Sehr gut', 'Trekkingbike', FALSE, NOW(), NOW()),
+('cla2l3m4n5o6p7q8r9s0', 'Bergamont E-Horizon Elite', 'Bergamont', 'FREI', 'Neu', 'E-Bike', TRUE, NOW(), NOW()),
+('cla3m4n5o6p7q8r9s0t1', 'Focus Jam 6.8', 'Focus', 'FREI', 'Gebraucht', 'Enduro', FALSE, NOW(), NOW()),
+('cla4n5o6p7q8r9s0t1u2', 'Riese & Müller Charger3', 'Riese & Müller', 'FREI', 'Neu', 'E-Bike', TRUE, NOW(), NOW()),
+('cla5o6p7q8r9s0t1u2v3', 'Canyon Spectral CF 8', 'Canyon', 'FREI', 'Sehr gut', 'Enduro', FALSE, NOW(), NOW()),
+('cla6p7q8r9s0t1u2v3w4', 'Flyer Gotour6 5.00', 'Flyer', 'FREI', 'Gut', 'E-Bike', TRUE, NOW(), NOW()),
+('cla7q8r9s0t1u2v3w4x5', 'YT Capra 29', 'YT Industries', 'FREI', 'Neu', 'Enduro', FALSE, NOW(), NOW()),
+('cla8r9s0t1u2v3w4x5y6', 'Kalkhoff Agattu 3.B XXL', 'Kalkhoff', 'FREI', 'Sehr gut', 'E-Bike', TRUE, NOW(), NOW()),
+('cla9s0t1u2v3w4x5y6z7', 'Santa Cruz Hightower', 'Santa Cruz', 'FREI', 'Gebraucht', 'Mountainbike', FALSE, NOW(), NOW()),
+('clb0t1u2v3w4x5y6z7a8', 'Gazelle Ultimate C8+ HMB', 'Gazelle', 'FREI', 'Neu', 'E-Bike', TRUE, NOW(), NOW());
