@@ -1,11 +1,11 @@
 'use client'
 
 import { useFahrradverleih } from '../lib/context'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { KundenDaten } from '../lib/types'
 
-export default function BuchungPage() {
+function BuchungContent() {
   const { fahrraeder, getVerfügbareFahrräder, neuesBuchung } = useFahrradverleih()
   const [step, setStep] = useState(1)
   const [selectedFahrradId, setSelectedFahrradId] = useState<string>('')
@@ -389,5 +389,13 @@ export default function BuchungPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function BuchungPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gray-50 flex items-center justify-center"><p>Laden...</p></div>}>
+      <BuchungContent />
+    </Suspense>
   )
 }
